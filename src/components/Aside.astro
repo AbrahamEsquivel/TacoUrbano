@@ -1,3 +1,16 @@
-<aside class="bg-amber-500 col-span-2">
-    <h1>Ola</h1>
+---
+import BtnAside from "./UiComponents/BtnAside.astro"
+
+---
+
+<aside class="col-span-2 h-screen w-full border-r-[1px] border-amber-500 relative">
+    <nav class="z-10 flex items-center justify-between">
+        <section class="w-full h-auto">
+            <ul class="w-full h-auto list-none p-2 flex flex-col gap-1.5">
+                <li><BtnAside /></li>
+                <li><BtnAside /></li> 
+                <li><BtnAside /></li>
+            </ul>
+        </section>
+    </nav>
 </aside>

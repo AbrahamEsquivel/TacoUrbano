@@ -1,0 +1,18 @@
+---
+const {
+  icon = "ri-question-line", // es un valor por defecto en caso de que olvide darle un icono¿, este se agregara por defecto 
+  text = "",                
+  href = "#",             
+  ...attrs                  
+} = Astro.props;
+---
+
+<button
+  class="bg-[#f5f5f5] p-2 rounded-lg flex items-center justify-center text-gray-700 hover:bg-gray-200 transition-colors duration-200"
+  {...attrs} 
+><!--Este es que tome las propiedades que no se especificaron explicitamente y los agregue en un nuevo objeto llamado attrs -->
+  <a href={href} class="flex items-center">
+    <i class={`${icon} ${text ? 'mr-2' : ''}`}></i>
+    {text && <span>{text}</span>} 
+  </a>
+</button>
